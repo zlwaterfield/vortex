@@ -18,6 +18,9 @@ TODO
 - Add instructions on how to set up R2
 - Delete the local file if deleted in bucket
 - hash file names instead of using them directly
+- Show examples
+- Improve the cli output and make it prettier
+- Talk about solutions for generating media like Zappy
 
 ## Prerequisites
 
