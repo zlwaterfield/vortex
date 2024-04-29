@@ -1,16 +1,28 @@
 # Vortex
 
-Vortex syncs files from a local directory to an Cloudflare R2 returns the hosted URL. Additionally, it generates short links for the uploaded files using the Dub API (optional).
+Vortex syncs files from a local directory to a Cloudflare R2 bucket to host and share them. Additionally, it generates short links for the uploaded files using the Dub API (optional).
 
 ## Features
 
-- **File Synchronization**: Uploads all files from a local directory to an S3 bucket, excluding specified files.
-- **Short Link Generation**: Generates short links for uploaded files using the Dub API.
+- **File Synchronization**: Sync files from a local directory to a Cloudflare R2 bucket
+  - Upload new local files to the bucket
+  - Delete files in the bucket that were deleted locally
+- **Short Link Generation**: Generates short links for uploaded files using the Dub API
+
+TODO
+
+- Delete short links for deleted files
+- Add a 404 page for deleted / missing files?
+- Test out the S3 usage
+- Make the customer domains more clear
+- Add instructions on how to set up R2
+- Delete the local file if deleted in bucket
+- hash file names instead of using them directly
 
 ## Prerequisites
 
 - Python 3.8 or higher
-- An Cloudflare account and R2 bucket (note: this would work with AWS S3 but isn't tested)
+- A Cloudflare account and R2 bucket (note: this would work with AWS S3 but isn't tested)
 - (optional) Dub account with API key
 
 ## Installation
@@ -21,7 +33,7 @@ git clone https://github.com/zlwaterfield/vortex.git
 cd vortex
 ```
 
-2. **Create virtual environment and install dependencies**:
+2. **Create a virtual environment and install dependencies**:
 ```bash
 python3.10 -m venv venv
 source venv/bin/activate
@@ -39,9 +51,12 @@ CUSTOM_DOMAIN=<your_custom_domain_for_short_links>
 DUB_API_KEY=<your_dub_api_key> (optional)
 ```
 
+4. **Start adding files**
+Use the Vortex folder as your local hosting directory. Each file you add will be part of the next sync. It supports folders as well.
+
 ## Usage
 
-To run the script to synchronize your files to S3 and generate short links:
+Run the script to synchronize your local files to your R2 bucket and generate short links:
 ```bash
 python sync.py
 ```
