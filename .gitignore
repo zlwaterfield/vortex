@@ -1,9 +1,16 @@
+# media
 *.mp4
 *.gif
-.png
-.jpg
-.jpeg
+*.png
+*.jpg
+*.jpeg
+
+# python
 .env
-.git
-.DS_Store
 venv/*
+
+# git
+.git
+
+# system
+.DS_Store
