@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 LOCAL_DIRECTORY = './'
-EXCLUDE_FILES = ['sync.py', '.DS_Store', '.gitignore', 'README.md', 'requirements.txt', '.env']
+EXCLUDE_FILES = ['sync.py', '.DS_Store', '.gitignore', 'README.md', 'requirements.txt', '.env', 'LICENSE']
 EXCLUDE_DIRS = ['.git', 'venv', '__pycache__'] 
 
 def create_s3_resource():
