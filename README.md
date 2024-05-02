@@ -72,6 +72,3 @@ Contributions are welcome! For major changes, please open an issue first to disc
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-```
-
-This README template includes basic sections that describe what the script does, how to set it up, and how to run it. You can modify the repository URL and any other specifics to better fit your project's context.
