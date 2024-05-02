@@ -1,6 +1,8 @@
 # Vortex
 
-Vortex syncs files from a local directory to a Cloudflare R2 bucket to host and share them. Additionally, it generates short links for the uploaded files using the Dub API (optional).
+The goal of Vortex is to make it easy to host media files and share their links. Think of a self-hosted Google Drive.
+
+Vortex syncs files from a local directory to a Cloudflare R2 bucket. It also generates short links for the uploaded files using the Dub API. This is all done via the terminal.
 
 ## Features
 
@@ -9,18 +11,17 @@ Vortex syncs files from a local directory to a Cloudflare R2 bucket to host and 
   - Delete files in the bucket that were deleted locally
 - **Short Link Generation**: Generates short links for uploaded files using the Dub API
 
-TODO
-
-- Delete short links for deleted files
-- Add a 404 page for deleted / missing files?
-- Test out the S3 usage
-- Make the customer domains more clear
+## Coming soon
+- Auto delete short links for deleted files
+- Update the documentation for S3 usage (Cloudflare R2 is S3 compatible)
+- Make the custom domains more clear
 - Add instructions on how to set up R2
 - Delete the local file if deleted in bucket
-- hash file names instead of using them directly
-- Show examples
-- Improve the cli output and make it prettier
+- Hash file names instead of using them directly
+- Show more examples and add images to the README
+- Improve the CLI output and make it prettier
 - Talk about solutions for generating media like Zappy
+- Add UI for manage the files
 
 ## Prerequisites
 
